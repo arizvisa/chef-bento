@@ -16,7 +16,7 @@ powershell_script 'remove unnecesary directories' do
       "$env:localappdata\\temp\\*",
       "$env:windir\\logs",
       "$env:windir\\winsxs\\manifestcache",
-      "C:\\Users\\vagrant\Favorites\\*"
+      "C:\\Users\\user\Favorites\\*"
   ) | % {
           if(Test-Path $_) {
               Write-Host "Removing $_"
