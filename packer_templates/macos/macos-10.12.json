@@ -200,8 +200,7 @@
         "{{template_dir}}/scripts/vagrant.sh",
         "{{template_dir}}/scripts/autologin.sh",
         "{{template_dir}}/scripts/vmtools.sh",
-        "{{template_dir}}/scripts/cleanup.sh",
-        "{{template_dir}}/scripts/minimize.sh"
+        "{{template_dir}}/scripts/cleanup.sh"
       ],
       "type": "shell"
     }

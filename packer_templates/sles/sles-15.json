@@ -179,8 +179,7 @@
         "{{template_dir}}/scripts/sudoers.sh",
         "{{template_dir}}/scripts/zypper-locks.sh",
         "{{template_dir}}/scripts/remove-dvd-source.sh",
-        "{{template_dir}}/scripts/cleanup.sh",
-        "{{template_dir}}/../_common/minimize.sh"
+        "{{template_dir}}/scripts/cleanup.sh"
       ],
       "type": "shell"
     }

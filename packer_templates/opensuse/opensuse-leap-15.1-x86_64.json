@@ -158,8 +158,7 @@
         "{{template_dir}}/scripts/vagrant_group.sh",
         "{{template_dir}}/scripts/sudoers.sh",
         "{{template_dir}}/scripts/zypper-locks.sh",
-        "{{template_dir}}/scripts/cleanup.sh",
-        "{{template_dir}}/../_common/minimize.sh"
+        "{{template_dir}}/scripts/cleanup.sh"
       ],
       "type": "shell"
     }

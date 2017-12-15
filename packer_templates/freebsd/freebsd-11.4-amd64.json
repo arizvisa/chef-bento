@@ -174,8 +174,7 @@
         "{{template_dir}}/scripts/sudoers.sh",
         "{{template_dir}}/../_common/vagrant.sh",
         "{{template_dir}}/scripts/vmtools.sh",
-        "{{template_dir}}/scripts/cleanup.sh",
-        "{{template_dir}}/scripts/minimize.sh"
+        "{{template_dir}}/scripts/cleanup.sh"
       ],
       "type": "shell"
     }
