@@ -26,7 +26,7 @@ systemsetup -setsleep Off 2>/dev/null
 systemsetup -setcomputersleep Off 2>/dev/null
 
 echo "Enabling automatic GUI login for the 'Vagrant' user."
-sysadminctl -autologin set -userName vagrant -password vagrant
+sysadminctl -autologin set -userName user -password user
 
 echo 'Disable screen lock'
-sysadminctl -screenLock off -password vagrant
+sysadminctl -screenLock off -password user

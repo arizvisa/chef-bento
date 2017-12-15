@@ -163,21 +163,21 @@ build {
   # Linux Shell scipts
   provisioner "shell" {
     environment_vars = var.os_name == "freebsd" ? [
-      "HOME_DIR=/home/vagrant",
+      "HOME_DIR=/home/user",
       "http_proxy=${var.http_proxy}",
       "https_proxy=${var.https_proxy}",
       "no_proxy=${var.no_proxy}",
       "pkg_branch=quarterly"
       ] : (
       var.os_name == "solaris" ? [] : [
-        "HOME_DIR=/home/vagrant",
+        "HOME_DIR=/home/user",
         "http_proxy=${var.http_proxy}",
         "https_proxy=${var.https_proxy}",
         "no_proxy=${var.no_proxy}"
       ]
     )
-    execute_command = var.os_name == "freebsd" ? "echo 'vagrant' | {{.Vars}} su -m root -c 'sh -eux {{.Path}}'" : (
-      var.os_name == "solaris" ? "echo 'vagrant'|sudo -S bash {{.Path}}" : "echo 'vagrant' | {{ .Vars }} sudo -S -E sh -eux '{{ .Path }}'"
+    execute_command = var.os_name == "freebsd" ? "echo 'password' | {{.Vars}} su -m root -c 'sh -eux {{.Path}}'" : (
+      var.os_name == "solaris" ? "echo 'user'|sudo -S bash {{.Path}}" : "echo 'user' | {{ .Vars }} sudo -S -E sh -eux '{{ .Path }}'"
     )
     expect_disconnect = true
     scripts           = local.scripts
@@ -193,8 +193,8 @@ build {
     except = var.is_windows ? null : local.source_names
   }
   provisioner "powershell" {
-    elevated_password = "vagrant"
-    elevated_user     = "vagrant"
+    elevated_password = "user"
+    elevated_user     = "user"
     scripts           = local.scripts
     except            = var.is_windows ? null : local.source_names
   }
@@ -202,8 +202,8 @@ build {
     except = var.is_windows ? null : local.source_names
   }
   provisioner "powershell" {
-    elevated_password = "vagrant"
-    elevated_user     = "vagrant"
+    elevated_password = "user"
+    elevated_user     = "user"
     scripts = [
       "${path.root}/scripts/windows/cleanup.ps1",
       "${path.root}/scripts/windows/optimize.ps1"

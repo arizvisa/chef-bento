@@ -232,13 +232,13 @@
   </user_defaults>
   <users t="list">
     <user t="map">
-      <user_password>vagrant</user_password>
+      <user_password>password</user_password>
       <username>root</username>
     </user>
     <user t="map">
-      <fullname>vagrant</fullname>
+      <fullname>user</fullname>
       <gid>100</gid>
-      <home>/home/vagrant</home>
+      <home>/home/user</home>
       <password_settings t="map">
         <expire/>
         <flag/>
@@ -249,8 +249,8 @@
       </password_settings>
       <shell>/bin/bash</shell>
       <uid>1000</uid>
-      <user_password>vagrant</user_password>
-      <username>vagrant</username>
+      <user_password>user</user_password>
+      <username>user</username>
     </user>
   </users>
   <kdump>

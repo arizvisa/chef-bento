@@ -20,11 +20,11 @@ OSX_VERS=$(sw_vers -productVersion | awk -F "." '{print $1}')
 # Set computer/hostname
 COMPNAME=macos-${OSX_VERS}
 scutil --set ComputerName "${COMPNAME}"
-scutil --set HostName "${COMPNAME}".vagrantup.com
+scutil --set HostName "${COMPNAME}".localdomain
 
-echo "Installing vagrant keys for vagrant user"
-mkdir "/Users/vagrant/.ssh"
-chmod 700 "/Users/vagrant/.ssh"
-curl -L 'https://raw.githubusercontent.com/hashicorp/vagrant/main/keys/vagrant.pub' > "/Users/vagrant/.ssh/authorized_keys"
-chmod 600 "/Users/vagrant/.ssh/authorized_keys"
-chown -R "vagrant" "/Users/vagrant/.ssh"
+echo "Installing vagrant keys for general user"
+mkdir "/Users/user/.ssh"
+chmod 700 "/Users/user/.ssh"
+curl -L 'https://raw.githubusercontent.com/hashicorp/vagrant/main/keys/vagrant.pub' > "/Users/user/.ssh/authorized_keys"
+chmod 600 "/Users/user/.ssh/authorized_keys"
+chown -R "user" "/Users/user/.ssh"

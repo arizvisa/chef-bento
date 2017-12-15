@@ -18,7 +18,7 @@ echo 'VMware Fusion specific items'
 if [ -e .vmfusion_version ] || echo "$PACKER_BUILDER_TYPE" | grep -q '^vmware'; then
   # Globbing here: VMware Fusion >= 8.5.4 includes a second
   # 'darwinPre15.iso' for any OS X guests pre-10.11
-  TOOLS_PATH=$(find "/Users/vagrant/" -name '*darwin*.iso' -print)
+  TOOLS_PATH=$(find "/Users/user/" -name '*darwin*.iso' -print)
     if [ ! -e "$TOOLS_PATH" ]; then
         echo "Couldn't locate uploaded tools iso at $TOOLS_PATH!"
         exit 1

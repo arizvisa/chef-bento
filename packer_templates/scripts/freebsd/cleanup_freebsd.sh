@@ -14,4 +14,4 @@ rm -rf /boot/kernel.old;
 rm -f /boot/kernel*/*.symbols;
 rm -f /*.core;
 rm -rf /var/cache/pkg;
-rm -f /usr/home/vagrant/*.iso;
+rm -f /usr/home/user/*.iso;

@@ -72,7 +72,7 @@ Stop-ServiceForReal BITS               # Background Intelligent Transfer Service
 "$env:windir\Panther\*"
 "$env:windir\WinSxS\ManifestCache\*"
 "$env:windir\SoftwareDistribution\Download"
-"C:\Users\vagrant\Favorites\*"
+"C:\Users\user\Favorites\*"
 ) | Where-Object {Test-Path $_} | ForEach-Object {
     Write-Host "Removing temporary files $_..."
     try {

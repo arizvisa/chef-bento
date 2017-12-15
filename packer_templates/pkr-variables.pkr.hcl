@@ -388,7 +388,7 @@ variable "shutdown_timeout" {
 }
 variable "ssh_password" {
   type    = string
-  default = "vagrant"
+  default = "user"
 }
 variable "ssh_port" {
   type    = number
@@ -400,11 +400,11 @@ variable "ssh_timeout" {
 }
 variable "ssh_username" {
   type    = string
-  default = "vagrant"
+  default = "user"
 }
 variable "winrm_password" {
   type    = string
-  default = "vagrant"
+  default = "user"
 }
 variable "winrm_timeout" {
   type    = string
@@ -412,7 +412,7 @@ variable "winrm_timeout" {
 }
 variable "winrm_username" {
   type    = string
-  default = "vagrant"
+  default = "user"
 }
 variable "vm_name" {
   type    = string

@@ -26,8 +26,8 @@ Copyright (c) 2010, Oracle and/or its affiliates. All rights reserved.
   <service name="system/config-user" version="1">
     <instance name="default" enabled="true">
       <property_group name="user_account">
-          <propval name="login" value="vagrant"/>
-          <propval name="password" value="$5$JsTLqHcZ$nAJVjxQ48k8YyIFaAo4.L0980WHDeDJbYt2caVuRw34"/>
+          <propval name="login" value="user"/>
+          <propval name="password" value="$5$JsTLqHcZ$O2QFLSNUcv/.BVRSZ1ANv/iEJbczI2ukdrW9yopf6L."/>
           <propval name="description" value="default_user"/>
           <propval name="shell" value="/usr/bin/bash"/>
           <propval name="uid" value="101"/>
@@ -37,7 +37,7 @@ Copyright (c) 2010, Oracle and/or its affiliates. All rights reserved.
           <propval name="profiles" value="System Administrator"/>
       </property_group>
       <property_group name="root_account">
-        <propval name="password" value="$5$JsTLqHcZ$nAJVjxQ48k8YyIFaAo4.L0980WHDeDJbYt2caVuRw34"/>
+        <propval name="password" value="$5$JsTLqHcZ$55BzQqFlB.XcuH32U8MVBUSdDp9Ovd8NznaWt7HgjU6"/>
         <propval name="type" value="role"/>
       </property_group>
     </instance>
@@ -45,7 +45,7 @@ Copyright (c) 2010, Oracle and/or its affiliates. All rights reserved.
   <service version="1" name="system/identity">
     <instance enabled="true" name="node">
       <property_group name="config">
-        <propval name="nodename" value="vagrant-solaris"/>
+        <propval name="nodename" value="solaris"/>
       </property_group>
     </instance>
   </service>

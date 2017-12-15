@@ -155,6 +155,10 @@ packer init -upgrade ./packer_templates
 packer build --only=qemu.vm -var-file=os_pkrvars/windows/windows-2022-x86_64.pkrvars.hcl ./packer_templates
 ```
 
+#### Authentication
+
+Once boxes have been built, one can authenticate to them using the account `user` with a default password of `user`. To login as administrator, use the password `password`.
+
 ### Proprietary Templates
 
 Templates for operating systems only available via license or subscription are also available in the repository, these include but are not limited to: Red Hat Enterprise Linux, and SUSE Linux Enterprise. As the ISOs are not publicly available the URL values will need to be overridden as appropriate. We rely on the efforts of those with access to licensed versions of the operating systems to keep these up-to-date.

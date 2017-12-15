@@ -1,9 +1,9 @@
 #cloud-config
 #vim:syntax=yaml
 users:
-  - name: vagrant
+  - name: user
     lock_passwd: false
-    passwd: $6$TbOu26d1hYO4EC/D$MymO7cTo/tID7tkH8TtAGyAdaK9nHwGQfDD9KwQmql3xP1BPPc67YCmoR8UO3Dw5jacOx3GvnBLqvAmHLHC4H0
+    passwd: $6$TbOu26d1hYO4EC/D$mT4wHH6IFwWzeZ6P1epuXshynhRvVsbIhwGRMUYPVDbD/fyhRK5YhJHstWnsQc4oCQAOHVDdIXkr8fse5rG3p0
     sudo: ALL=(ALL) NOPASSWD:ALL
 
 # Enable password authentication for SSH
