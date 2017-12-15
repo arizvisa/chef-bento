@@ -118,7 +118,7 @@
           <WillShowUI>OnError</WillShowUI>
         </ProductKey>
         <AcceptEula>true</AcceptEula>
-        <FullName>Vagrant</FullName>
+        <FullName>User</FullName>
         <Organization>Bento by Chef Software, Inc.</Organization>
       </UserData>
     </component>
@@ -154,28 +154,28 @@
       <TimeZone>UTC</TimeZone>
       <UserAccounts>
         <AdministratorPassword>
-          <Value>vagrant</Value>
+          <Value>default root password</Value>
           <PlainText>true</PlainText>
         </AdministratorPassword>
         <LocalAccounts>
           <LocalAccount wcm:action="add">
             <Password>
-              <Value>vagrant</Value>
+              <Value>user</Value>
               <PlainText>true</PlainText>
             </Password>
-            <Description>Vagrant User</Description>
-            <DisplayName>vagrant</DisplayName>
+            <Description>Generic User</Description>
+            <DisplayName>user</DisplayName>
             <Group>administrators</Group>
-            <Name>vagrant</Name>
+            <Name>user</Name>
           </LocalAccount>
         </LocalAccounts>
       </UserAccounts>
             <AutoLogon>
                 <Password>
-                    <Value>vagrant</Value>
+                    <Value>user</Value>
                     <PlainText>true</PlainText>
                 </Password>
-                <Username>vagrant</Username>
+                <Username>user</Username>
                 <Enabled>true</Enabled>
             </AutoLogon>
       <FirstLogonCommands>
@@ -198,9 +198,9 @@
           <RequiresUserInput>false</RequiresUserInput>
         </SynchronousCommand>
         <SynchronousCommand wcm:action="add">
-          <CommandLine>cmd.exe /c wmic useraccount where "name='vagrant'" set PasswordExpires=FALSE</CommandLine>
+          <CommandLine>cmd.exe /c wmic useraccount where "name='user'" set PasswordExpires=FALSE</CommandLine>
           <Order>4</Order>
-          <Description>Disable password expiration for vagrant user</Description>
+          <Description>Disable password expiration for general user</Description>
         </SynchronousCommand>
       </FirstLogonCommands>
     </component>
