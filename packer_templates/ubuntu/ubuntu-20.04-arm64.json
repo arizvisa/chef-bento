@@ -22,11 +22,11 @@
             "output_directory": "{{ user `build_directory` }}/packer-{{user `template`}}-parallels",
             "parallels_tools_flavor": "lin-arm",
             "prlctl_version_file": ".prlctl_version",
-            "shutdown_command": "echo 'vagrant' | sudo -S shutdown -P now",
-            "ssh_password": "vagrant",
+            "shutdown_command": "echo 'user' | sudo -S shutdown -P now",
+            "ssh_password": "user",
             "ssh_port": 22,
             "ssh_timeout": "10000s",
-            "ssh_username": "vagrant",
+            "ssh_username": "user",
             "type": "parallels-iso",
             "vm_name": "{{ user `template` }}"
         }
@@ -34,18 +34,18 @@
     "post-processors": [
         {
             "output": "{{ user `build_directory` }}/{{user `box_basename`}}.{{.Provider}}.box",
-            "type": "vagrant"
+            "type": "user"
         }
     ],
     "provisioners": [
         {
             "environment_vars": [
-                "HOME_DIR=/home/vagrant",
+                "HOME_DIR=/home/user",
                 "http_proxy={{user `http_proxy`}}",
                 "https_proxy={{user `https_proxy`}}",
                 "no_proxy={{user `no_proxy`}}"
             ],
-            "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E sh -eux '{{.Path}}'",
+            "execute_command": "echo 'user' | {{.Vars}} sudo -S -E sh -eux '{{.Path}}'",
             "expect_disconnect": true,
             "scripts": [
                 "{{template_dir}}/scripts/update.sh",
