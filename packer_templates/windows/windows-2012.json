@@ -16,9 +16,9 @@
       "shutdown_timeout": "15m",
       "switch_name": "{{user `hyperv_switch`}}",
       "type": "hyperv-iso",
-      "winrm_password": "vagrant",
+      "winrm_password": "user",
       "winrm_timeout": "12h",
-      "winrm_username": "vagrant"
+      "winrm_username": "user"
     },
     {
       "communicator": "winrm",
@@ -28,7 +28,7 @@
         "{{ user `floppy_dir` }}/{{ user `unattended_file_path` }}"
       ],
       "guest_additions_mode": "{{ user `guest_additions_mode` }}",
-      "guest_additions_path": "C:/users/vagrant/VBoxGuestAdditions.iso",
+      "guest_additions_path": "C:/users/user/VBoxGuestAdditions.iso",
       "guest_additions_url": "{{ user `guest_additions_url` }}",
       "guest_os_type": "Windows2012_64",
       "hard_drive_interface": "sata",
@@ -55,9 +55,9 @@
           "none"
         ]
       ],
-      "winrm_password": "vagrant",
+      "winrm_password": "user",
       "winrm_timeout": "12h",
-      "winrm_username": "vagrant"
+      "winrm_username": "user"
     },
     {
       "communicator": "winrm",
@@ -84,9 +84,9 @@
       "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\"",
       "shutdown_timeout": "15m",
       "type": "parallels-iso",
-      "winrm_password": "vagrant",
+      "winrm_password": "user",
       "winrm_timeout": "12h",
-      "winrm_username": "vagrant"
+      "winrm_username": "user"
     },
     {
       "communicator": "winrm",
@@ -108,9 +108,9 @@
       "tools_upload_path": "c:/Windows/Temp/vmware.iso",
       "type": "vmware-iso",
       "version": 11,
-      "winrm_password": "vagrant",
+      "winrm_password": "user",
       "winrm_timeout": "12h",
-      "winrm_username": "vagrant"
+      "winrm_username": "user"
     },
     {
       "communicator": "winrm",
@@ -145,9 +145,9 @@
       "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\"",
       "shutdown_timeout": "15m",
       "type": "qemu",
-      "winrm_password": "vagrant",
+      "winrm_password": "user",
       "winrm_timeout": "12h",
-      "winrm_username": "vagrant"
+      "winrm_username": "user"
     }
   ],
   "post-processors": [
@@ -208,8 +208,8 @@
       "type": "chef-solo"
     },
     {
-      "elevated_password": "vagrant",
-      "elevated_user": "vagrant",
+      "elevated_password": "default root password",
+      "elevated_user": "root",
       "script": "{{template_dir}}/scripts/cleanup.ps1",
       "type": "powershell"
     }
