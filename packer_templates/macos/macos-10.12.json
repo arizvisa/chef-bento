@@ -29,8 +29,7 @@
         "ich7m.present": "TRUE",
         "keyboardAndMouseProfile": "macProfile",
         "smc.present": "TRUE"
-      },
-      "vmx_remove_ethernet_interfaces": true
+      }
     },
     {
       "boot_wait": "2s",
@@ -228,4 +227,3 @@
     "version": "TIMESTAMP"
   }
 }
-
