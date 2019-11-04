@@ -306,7 +306,7 @@ variable "vmware_vmx_data" {
 }
 variable "vmware_vmx_remove_ethernet_interfaces" {
   type    = bool
-  default = true
+  default = false
 }
 variable "vmware_enable_usb" {
   type    = bool
