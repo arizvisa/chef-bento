@@ -23,3 +23,6 @@ fi
 
 # Adding a 2 sec delay to the interface up, to make the dhclient happy
 echo "pre-up sleep 2" >> /etc/network/interfaces
+
+# Automatically bring the intereface up, so that the dhclient actually works
+echo "auto eth0" >> /etc/network/interfaces
