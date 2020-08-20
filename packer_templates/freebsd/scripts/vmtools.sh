@@ -26,7 +26,7 @@ virtualbox-iso|virtualbox-ovf)
     echo 'ifconfig_vtnet3_name="em3"' >>/etc/rc.conf;
 
     pw groupadd vboxusers;
-    pw groupmod vboxusers -m vagrant;
+    pw groupmod vboxusers -m user;
     ;;
 
 vmware-iso|vmware-vmx)

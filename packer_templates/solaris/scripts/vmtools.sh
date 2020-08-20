@@ -17,9 +17,9 @@ echo "basedir=default" >> /tmp/nocheck
 
 echo "all" > /tmp/allfiles
 
-if [ -f /home/vagrant/.vbox_version ]; then
+if [ -f /home/user/.vbox_version ]; then
     mkdir /tmp/vbox
-    VER=$(cat /home/vagrant/.vbox_version)
+    VER=$(cat /home/user/.vbox_version)
     ls
     sudo -i pkgadd -a /tmp/nocheck -d /media/VBOXADDITIONS_*/VBoxSolarisAdditions.pkg < /tmp/allfiles
 fi
