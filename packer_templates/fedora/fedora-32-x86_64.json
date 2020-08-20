@@ -80,8 +80,7 @@
       "vmx_data": {
         "cpuid.coresPerSocket": "1",
         "ethernet0.pciSlotNumber": "32"
-      },
-      "vmx_remove_ethernet_interfaces": true
+      }
     },
     {
       "boot_command": [
