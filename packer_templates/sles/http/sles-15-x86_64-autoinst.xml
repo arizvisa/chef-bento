@@ -253,9 +253,9 @@
   <users config:type="list">
     <user>
       <encrypted config:type="boolean">true</encrypted>
-      <fullname>vagrant</fullname>
+      <fullname>user</fullname>
       <gid>100</gid>
-      <home>/home/vagrant</home>
+      <home>/home/user</home>
       <password_settings>
         <expire/>
         <flag/>
@@ -266,8 +266,8 @@
       </password_settings>
       <shell>/bin/bash</shell>
       <uid>1000</uid>
-      <user_password>$2y$05$NA1Li9ZKJOLRW5mMTXm6/e5r8dltWS5RpDZpvHrI82aLE00V51tdi</user_password>
-      <username>vagrant</username>
+      <user_password>$2y$05$PvNkX4dxws4msu4bRWaImeXHop6nmnZA.HLBeXzoEZbInFk.D.0PW</user_password>
+      <username>user</username>
     </user>
     <user>
       <encrypted config:type="boolean">true</encrypted>
@@ -284,7 +284,7 @@
       </password_settings>
       <shell>/bin/bash</shell>
       <uid>0</uid>
-      <user_password>$6$UgKtUD0AUMIA$VWLyc2Uvl0Lk6xxfTuoRb0/jrhZ9IJG/Gtx/DkZUEWZm.JYO1Q1fvPo6gDxQAHp38kQ1DG1vNGRgu2T/z/vih.</user_password>
+      <user_password>$6$UgKtUD0AUMIA$5jWcrgWnfL3rEfvsftkCzVzDuq/Km/gxFd.ZciF.z3m9YaxvbV8t7mVJ7ej4.pF1DU5j6qyhsv4IbXDUH47oU0</user_password>
       <username>root</username>
     </user>
   </users>
