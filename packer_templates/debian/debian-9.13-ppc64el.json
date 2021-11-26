@@ -36,11 +36,11 @@
       "memory": "{{ user `memory` }}",
       "output_directory": "{{ user `build_directory` }}/packer-{{user `template`}}-qemu",
       "qemu_binary": "qemu-system-ppc64le",
-      "shutdown_command": "echo 'vagrant' | sudo -S /sbin/shutdown -hP now",
-      "ssh_password": "vagrant",
+      "shutdown_command": "echo 'user' | sudo -S /sbin/shutdown -hP now",
+      "ssh_password": "user",
       "ssh_port": 22,
       "ssh_timeout": "10000s",
-      "ssh_username": "vagrant",
+      "ssh_username": "user",
       "type": "qemu",
       "use_default_display": true,
       "vm_name": "{{ user `template` }}",
@@ -59,12 +59,12 @@
   "provisioners": [
     {
       "environment_vars": [
-        "HOME_DIR=/home/vagrant",
+        "HOME_DIR=/home/user",
         "http_proxy={{user `http_proxy`}}",
         "https_proxy={{user `https_proxy`}}",
         "no_proxy={{user `no_proxy`}}"
       ],
-      "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E sh -eux '{{.Path}}'",
+      "execute_command": "echo 'user' | {{.Vars}} sudo -S -E sh -eux '{{.Path}}'",
       "expect_disconnect": true,
       "scripts": [
         "{{template_dir}}/scripts/update.sh",

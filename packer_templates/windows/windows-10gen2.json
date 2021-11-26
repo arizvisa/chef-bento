@@ -21,9 +21,9 @@
       "skip_export": false,
       "switch_name": "{{user `hyperv_switch`}}",
       "type": "hyperv-iso",
-      "winrm_password": "vagrant",
+      "winrm_password": "user",
       "winrm_timeout": "12h",
-      "winrm_username": "vagrant"
+      "winrm_username": "user"
     },
     {
       "boot_command": [
@@ -61,9 +61,9 @@
       "shutdown_timeout": "15m",
       "type": "qemu",
       "boot_wait": "{{ user `boot_wait` }}",
-      "winrm_password": "vagrant",
+      "winrm_password": "user",
       "winrm_timeout": "12h",
-      "winrm_username": "vagrant"
+      "winrm_username": "user"
     }
   ],
   "post-processors": [
@@ -121,8 +121,8 @@
       "type": "chef-solo"
     },
     {
-      "elevated_password": "vagrant",
-      "elevated_user": "vagrant",
+      "elevated_password": "default root password",
+      "elevated_user": "root",
       "script": "{{template_dir}}/scripts/cleanup.ps1",
       "type": "powershell"
     }
