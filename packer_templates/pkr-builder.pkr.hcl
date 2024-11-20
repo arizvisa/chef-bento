@@ -177,7 +177,11 @@ build {
       ]
     )
     execute_command = var.os_name == "freebsd" ? "echo 'password' | {{.Vars}} su -m root -c 'sh -eux {{.Path}}'" : (
-      var.os_name == "solaris" ? "echo 'user'|sudo -S bash {{.Path}}" : "echo 'user' | {{ .Vars }} sudo -S -E sh -eux '{{ .Path }}'"
+      var.os_name == "solaris" ? "echo 'user'|sudo -S bash {{.Path}}" : (
+        var.os_name == "opensuse-leap" || var.os_name == "sles" ?
+          "echo 'password' | {{ .Vars }} sudo -S -E sh -eux '{{ .Path }}'" :
+        "echo 'user' | {{ .Vars }} sudo -S -E sh -eux '{{ .Path }}'"
+      )
     )
     expect_disconnect = true
     scripts           = local.scripts
