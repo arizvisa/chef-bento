@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <unattend xmlns="urn:schemas-microsoft-com:unattend" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State">
-    <!--https://schneegans.de/windows/unattend-generator/?LanguageMode=Unattended&UILanguage=en-US&UserLocale=en-US&KeyboardLayout=0409%3A00000409&ProcessorArchitecture=arm64&BypassRequirementsCheck=true&ComputerNameMode=Custom&ComputerName=Vagrant&TimeZoneMode=Implicit&PartitionMode=Unattended&PartitionLayout=GPT&EspSize=100&RecoveryMode=None&WindowsEditionMode=Unattended&WindowsEdition=pro&UserAccountMode=Unattended&AccountName0=vagrant&AccountPassword0=vagrant&AccountGroup0=Administrators&AccountName1=&AccountName2=&AccountName3=&AccountName4=&AutoLogonMode=Own&LockoutMode=Disabled&DisableSystemRestore=true&EnableRemoteDesktop=true&AllowPowerShellScripts=true&DisableAppSuggestions=true&DisableWidgets=true&WifiMode=Skip&ExpressSettings=DisableAll&Remove3DViewer=true&RemoveCalculator=true&RemoveCamera=true&RemoveClipchamp=true&RemoveClock=true&RemoveCortana=true&RemoveDevHome=true&RemoveFeedbackHub=true&RemoveGetHelp=true&RemoveInternetExplorer=true&RemoveMaps=true&RemoveMathInputPanel=true&RemoveZuneVideo=true&RemoveNews=true&RemoveNotepad=true&RemoveOffice365=true&RemoveOneDrive=true&RemoveOneNote=true&RemoveOutlook=true&RemovePaint=true&RemovePaint3D=true&RemovePeople=true&RemovePhotos=true&RemovePowerAutomate=true&RemoveQuickAssist=true&RemoveSkype=true&RemoveSnippingTool=true&RemoveSolitaire=true&RemoveStepsRecorder=true&RemoveStickyNotes=true&RemoveTeams=true&RemoveGetStarted=true&RemoveToDo=true&RemoveVoiceRecorder=true&RemoveWeather=true&RemoveWindowsMediaPlayer=true&RemoveZuneMusic=true&RemoveXboxApps=true&RemoveYourPhone=true&WdacMode=Skip-->
+    <!--https://schneegans.de/windows/unattend-generator/?LanguageMode=Unattended&UILanguage=en-US&UserLocale=en-US&KeyboardLayout=0409%3A00000409&ProcessorArchitecture=arm64&BypassRequirementsCheck=true&ComputerNameMode=Custom&ComputerName=Computer&TimeZoneMode=Implicit&PartitionMode=Unattended&PartitionLayout=GPT&EspSize=100&RecoveryMode=None&WindowsEditionMode=Unattended&WindowsEdition=pro&UserAccountMode=Unattended&AccountName0=user&AccountPassword0=user&AccountGroup0=Administrators&AccountName1=&AccountName2=&AccountName3=&AccountName4=&AutoLogonMode=Own&LockoutMode=Disabled&DisableSystemRestore=true&EnableRemoteDesktop=true&AllowPowerShellScripts=true&DisableAppSuggestions=true&DisableWidgets=true&WifiMode=Skip&ExpressSettings=DisableAll&Remove3DViewer=true&RemoveCalculator=true&RemoveCamera=true&RemoveClipchamp=true&RemoveClock=true&RemoveCortana=true&RemoveDevHome=true&RemoveFeedbackHub=true&RemoveGetHelp=true&RemoveInternetExplorer=true&RemoveMaps=true&RemoveMathInputPanel=true&RemoveZuneVideo=true&RemoveNews=true&RemoveNotepad=true&RemoveOffice365=true&RemoveOneDrive=true&RemoveOneNote=true&RemoveOutlook=true&RemovePaint=true&RemovePaint3D=true&RemovePeople=true&RemovePhotos=true&RemovePowerAutomate=true&RemoveQuickAssist=true&RemoveSkype=true&RemoveSnippingTool=true&RemoveSolitaire=true&RemoveStepsRecorder=true&RemoveStickyNotes=true&RemoveTeams=true&RemoveGetStarted=true&RemoveToDo=true&RemoveVoiceRecorder=true&RemoveWeather=true&RemoveWindowsMediaPlayer=true&RemoveZuneMusic=true&RemoveXboxApps=true&RemoveYourPhone=true&WdacMode=Skip-->
     <settings pass="windowsPE">
         <component name="Microsoft-Windows-PnpCustomizationsWinPE" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" processorArchitecture="arm64">
             <!--
@@ -576,28 +576,28 @@
             </OOBE>
             <UserAccounts>
                 <AdministratorPassword>
-                    <Value>vagrant</Value>
+                    <Value>user</Value>
                     <PlainText>true</PlainText>
                 </AdministratorPassword>
                 <LocalAccounts>
                     <LocalAccount wcm:action="add">
                         <Password>
-                            <Value>vagrant</Value>
+                            <Value>user</Value>
                             <PlainText>true</PlainText>
                         </Password>
-                        <Description>Vagrant User</Description>
-                        <DisplayName>vagrant</DisplayName>
+                        <Description>General User</Description>
+                        <DisplayName>user</DisplayName>
                         <Group>Administrators</Group>
-                        <Name>vagrant</Name>
+                        <Name>user</Name>
                     </LocalAccount>
                 </LocalAccounts>
             </UserAccounts>
             <AutoLogon>
                 <Password>
-                    <Value>vagrant</Value>
+                    <Value>user</Value>
                     <PlainText>true</PlainText>
                 </Password>
-                <Username>vagrant</Username>
+                <Username>user</Username>
                 <Enabled>true</Enabled>
             </AutoLogon>
             <FirstLogonCommands>
@@ -683,11 +683,11 @@
                 </SynchronousCommand>
                 <SynchronousCommand wcm:action="add">
                     <Order>17</Order>
-                    <CommandLine>%windir%\System32\cmd.exe /c wmic useraccount where "name='vagrant'" set PasswordExpires=FALSE</CommandLine>
-                    <Description>Disable password expiration for vagrant user</Description>
+                    <CommandLine>%windir%\System32\cmd.exe /c wmic useraccount where "name='user'" set PasswordExpires=FALSE</CommandLine>
+                    <Description>Disable password expiration for general user</Description>
                 </SynchronousCommand>
                 <SynchronousCommand wcm:action="add">
-                    <CommandLine>%SystemRoot%\System32\reg.exe ADD "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v DefaultPassword /t REG_SZ /d "vagrant" /f</CommandLine>
+                    <CommandLine>%SystemRoot%\System32\reg.exe ADD "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v DefaultPassword /t REG_SZ /d "user" /f</CommandLine>
                     <Order>18</Order>
                     <Description>Enable AutoLogon</Description>
                 </SynchronousCommand>

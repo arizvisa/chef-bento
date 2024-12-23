@@ -135,7 +135,7 @@
                     <WillShowUI>OnError</WillShowUI>
                 </ProductKey>
                 <AcceptEula>true</AcceptEula>
-                <FullName>Vagrant</FullName>
+                <FullName>User</FullName>
                 <Organization>Bento by Progress Chef.</Organization>
             </UserData>
             <DynamicUpdate>
@@ -179,28 +179,28 @@
             <TimeZone>UTC</TimeZone>
             <UserAccounts>
                 <AdministratorPassword>
-                    <Value>vagrant</Value>
+                    <Value>user</Value>
                     <PlainText>true</PlainText>
                 </AdministratorPassword>
                 <LocalAccounts>
                     <LocalAccount wcm:action="add">
                         <Password>
-                            <Value>vagrant</Value>
+                            <Value>user</Value>
                             <PlainText>true</PlainText>
                         </Password>
-                        <Description>Vagrant User</Description>
-                        <DisplayName>vagrant</DisplayName>
+                        <Description>General User</Description>
+                        <DisplayName>user</DisplayName>
                         <Group>administrators</Group>
-                        <Name>vagrant</Name>
+                        <Name>user</Name>
                     </LocalAccount>
                 </LocalAccounts>
             </UserAccounts>
             <AutoLogon>
                 <Password>
-                    <Value>vagrant</Value>
+                    <Value>user</Value>
                     <PlainText>true</PlainText>
                 </Password>
-                <Username>vagrant</Username>
+                <Username>user</Username>
                 <Enabled>true</Enabled>
             </AutoLogon>
             <FirstLogonCommands>
@@ -286,11 +286,11 @@
                 </SynchronousCommand>
                 <SynchronousCommand wcm:action="add">
                     <Order>17</Order>
-                    <CommandLine>%windir%\System32\cmd.exe /c wmic useraccount where "name='vagrant'" set PasswordExpires=FALSE</CommandLine>
-                    <Description>Disable password expiration for vagrant user</Description>
+                    <CommandLine>%windir%\System32\cmd.exe /c wmic useraccount where "name='user'" set PasswordExpires=FALSE</CommandLine>
+                    <Description>Disable password expiration for general user</Description>
                 </SynchronousCommand>
                 <SynchronousCommand wcm:action="add">
-                    <CommandLine>%SystemRoot%\System32\reg.exe ADD "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v DefaultPassword /t REG_SZ /d "vagrant" /f</CommandLine>
+                    <CommandLine>%SystemRoot%\System32\reg.exe ADD "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v DefaultPassword /t REG_SZ /d "user" /f</CommandLine>
                     <Order>18</Order>
                     <Description>Enable AutoLogon</Description>
                 </SynchronousCommand>

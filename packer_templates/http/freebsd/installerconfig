@@ -56,10 +56,10 @@ else
 fi
 
 # Set up user accounts
-echo "vagrant" | pw -V /etc useradd vagrant -h 0 -s /bin/sh -G wheel -d ${home_base}/vagrant -c "Vagrant User"
-echo "vagrant" | pw -V /etc usermod root
+echo "user" | pw -V /etc useradd user -h 0 -s /bin/sh -G wheel -d ${home_base}/user -c "Generic User"
+echo "password" | pw -V /etc usermod root
 
-mkdir -p ${home_base}/vagrant
-chown 1001:1001 ${home_base}/vagrant
+mkdir -p ${home_base}/user
+chown 1001:1001 ${home_base}/user
 
 reboot

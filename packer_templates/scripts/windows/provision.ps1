@@ -111,7 +111,7 @@ $AdsScript              = 0x00001
 $AdsAccountDisable      = 0x00002
 $AdsNormalAccount       = 0x00200
 $AdsDontExpirePassword  = 0x10000
-$account = [ADSI]'WinNT://./vagrant'
+$account = [ADSI]'WinNT://./user'
 $account.Userflags = $AdsNormalAccount -bor $AdsDontExpirePassword
 $account.SetInfo()
 

@@ -28,7 +28,7 @@ boot_command = [
   # I have read and agree to the macOS Software License Agreement
   "<tab><wait><spacebar><wait5s>",
   # Create a Computer Account
-  "vagrant<wait><tab><wait><tab><wait>vagrant<wait><tab><wait>vagrant<wait><tab><wait><tab><wait><tab><wait><spacebar><wait1m>",
+  "user<wait><tab><wait><tab><wait>user<wait><tab><wait>user<wait><tab><wait><tab><wait><tab><wait><spacebar><wait1m>",
   # Enable Location Services
   "<leftShiftOn><tab><leftShiftOff><wait><spacebar><wait5s>",
   # Are you sure you don't want to use Location Services?
@@ -59,11 +59,11 @@ boot_command = [
   # Open Terminal
   "<leftSuperOn><spacebar><leftSuperOff><wait>terminal<wait><enter><wait5s>",
   # Add vagrant user to sudoers
-  "echo 'vagrant' | sudo -S sh -c 'echo \"vagrant ALL=(ALL) NOPASSWD: ALL\" > /etc/sudoers.d/vagrant'<wait><enter><wait5s>",
+  "echo 'user' | sudo -S sh -c 'echo \"user ALL=(ALL) NOPASSWD: ALL\" > /etc/sudoers.d/vagrant'<wait><enter><wait5s>",
   # Set Auto login for vagrant
-  "sudo sysadminctl -autologin set -userName vagrant -password vagrant<wait><enter><wait5s>",
+  "sudo sysadminctl -autologin set -userName user -password user<wait><enter><wait5s>",
   # Disable screen lock
-  "sudo sysadminctl -screenLock off -password vagrant<wait><enter><wait5s>",
+  "sudo sysadminctl -screenLock off -password user<wait><enter><wait5s>",
   # Install Parallels Tools
   "sudo installer -pkg /Volumes/Parallels\\ Tools/Install.app/Contents/Resources/Install.mpkg -target /<wait><enter><wait5s>",
   # Reboot

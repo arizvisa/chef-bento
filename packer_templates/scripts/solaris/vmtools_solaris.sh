@@ -17,7 +17,7 @@ sudo chmod 777 /tmp
   echo "basedir=default"
 } > /tmp/nocheck
 
-if [ -f /home/vagrant/.vbox_version ]; then
+if [ -f /home/user/.vbox_version ]; then
     mkdir /tmp/vbox
     ls
     echo "all" | sudo -i pkgadd -a /tmp/nocheck -d /media/VBOXADDITIONS_*/VBoxSolarisAdditions.pkg
